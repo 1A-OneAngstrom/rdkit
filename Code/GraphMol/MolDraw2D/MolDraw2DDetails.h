@@ -103,7 +103,7 @@ RDKIT_MOLDRAW2D_EXPORT std::vector<Point2D> handdrawnLine(
     double endShift = 0.5);
 
 inline std::string formatDouble(double val) {
-  return boost::str(boost::format("%.1f") % val);
+  return boost::str(boost::format("%.3f") % val);
 }
 
 RDKIT_MOLDRAW2D_EXPORT bool doesLineIntersect(const StringRect &rect,
