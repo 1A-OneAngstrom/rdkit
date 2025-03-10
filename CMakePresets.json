@@ -35,9 +35,9 @@
 			
           "CMAKE_POSITION_INDEPENDENT_CODE":"ON",
           "CMAKE_BUILD_TYPE": "Debug",
-		  "CMAKE_PREFIX_PATH": "/scratch/jenkins/workspace/Qt/6.8.2/gcc_64/lib/cmake",
+		      "CMAKE_PREFIX_PATH": "~/Qt/6.8.2/gcc_64/lib/cmake",
 
-		  "Boost_DIR": "/usr/local",
+		      "Boost_DIR": "/usr/local",
           "Boost_USE_STATIC_LIBS": "ON",
           "Boost_USE_STATIC_RUNTIME": "ON",
 
@@ -64,9 +64,9 @@
 			
           "CMAKE_POSITION_INDEPENDENT_CODE":"ON",
           "CMAKE_BUILD_TYPE": "Release",
-		  "CMAKE_PREFIX_PATH": "/scratch/jenkins/workspace/Qt/6.8.2/gcc_64/lib/cmake",
+		      "CMAKE_PREFIX_PATH": "~/Qt/6.8.2/gcc_64/lib/cmake",
 
-		  "Boost_DIR": "/usr/local",
+		      "Boost_DIR": "/usr/local",
           "Boost_USE_STATIC_LIBS": "ON",
           "Boost_USE_STATIC_RUNTIME": "ON",
 
@@ -94,9 +94,9 @@
 			
           "CMAKE_POSITION_INDEPENDENT_CODE":"ON",
           "CMAKE_BUILD_TYPE": "Debug",
-		  "CMAKE_PREFIX_PATH": "/opt/jenkins/workspace/Qt/6.8.2/macos/lib/cmake",
+		      "CMAKE_PREFIX_PATH": "/opt/jenkins/workspace/Qt/6.8.2/macos/lib/cmake",
 
-		  "Boost_DIR": "/usr/local",
+		      "Boost_DIR": "/usr/local",
           "Boost_USE_STATIC_LIBS": "ON",
           "Boost_USE_STATIC_RUNTIME": "ON",
 
@@ -123,9 +123,9 @@
 			
           "CMAKE_POSITION_INDEPENDENT_CODE":"ON",
           "CMAKE_BUILD_TYPE": "Release",
-		  "CMAKE_PREFIX_PATH": "/opt/jenkins/workspace/Qt/6.8.2/macos/lib/cmake",
+		      "CMAKE_PREFIX_PATH": "/opt/jenkins/workspace/Qt/6.8.2/macos/lib/cmake",
           
-		  "Boost_DIR": "/usr/local",
+		      "Boost_DIR": "/usr/local",
           "Boost_USE_STATIC_LIBS": "ON",
           "Boost_USE_STATIC_RUNTIME": "ON",
 
