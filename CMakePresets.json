@@ -11,7 +11,7 @@
 		  
           "Boost_DIR": "C:/local/boost_1_87_0/lib64-msvc-14.3/cmake/Boost-1.87.0",
           "Boost_USE_STATIC_LIBS": "ON",
-          "Boost_USE_STATIC_RUNTIME": "ON",
+          "Boost_USE_STATIC_RUNTIME": "OFF",
 
           "BUILD_SHARED_LIBS": "OFF",
 
@@ -150,14 +150,14 @@
 	  "buildPresets": [
 
         {
-            "name": "build_win_x64_qt6.8.2_release",
+            "name": "build_win_qt6.8.2_release",
             "configurePreset": "win_qt6.8.2",
             "configuration": "Release",
             "targets": ["INSTALL"]
         }
         ,
         {
-            "name": "build_win_x64_qt6.8.2_debug",
+            "name": "build_win_qt6.8.2_debug",
             "configurePreset": "win_qt6.8.2",
             "configuration": "Debug",
             "targets": ["INSTALL"]
