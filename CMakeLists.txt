@@ -127,6 +127,7 @@ endif()
 include(TestBigEndian)
 TEST_BIG_ENDIAN(RDK_BIG_ENDIAN)
 
+
 # At build time put runtime binaries in the bin subdirectory
 set(RDK_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/bin")
 set(RDK_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/lib")
@@ -166,7 +167,7 @@ endif()
 
 if(RDK_INSTALL_INTREE)
   set(RDKit_BinDir "${CMAKE_SOURCE_DIR}/bin")
-  set(RDKit_LibDir "${CMAKE_SOURCE_DIR}/lib")
+  set(RDKit_LibDir "${CMAKE_SOURCE_DIR}/lib/${CMAKE_BUILD_TYPE}")  
   set(RDKit_HdrDir "Code") # used in rdkit-config.cmake, path prefix not needed.
   set(RDKit_ShareDir "${CMAKE_SOURCE_DIR}")
 else(RDK_INSTALL_INTREE)
