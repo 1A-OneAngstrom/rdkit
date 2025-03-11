@@ -27,67 +27,125 @@
           "RDK_BUILD_CPP_TESTS": "OFF"
         }
       },
-	  {
-        "name": "lin_debug_qt6.8.2",
-        "generator": "Unix Makefiles",
-        "binaryDir": "${sourceDir}/buildDebug",
-        "cacheVariables": {
-			
-          "CMAKE_POSITION_INDEPENDENT_CODE":"ON",
-          "CMAKE_BUILD_TYPE": "Debug",
-		      "CMAKE_PREFIX_PATH": "~/Qt/6.8.2/gcc_64/lib/cmake",
-
-		      "Boost_DIR": "/usr/local",
-          "Boost_USE_STATIC_LIBS": "ON",
-          "Boost_USE_STATIC_RUNTIME": "ON",
-
-          "BUILD_SHARED_LIBS": "OFF",
-
-          "RDK_USE_BOOST_SERIALIZATION": "ON",
-          "RDK_BUILD_PYTHON_WRAPPERS": "OFF",
-          "RDK_USE_QT6": "ON",
-          "RDK_BUILD_QT_SUPPORT": "ON",
-          "RDK_BUILD_FREETYPE_SUPPORT": "OFF",
-          "RDK_BUILD_INCHI_SUPPORT": "ON",
-          "RDK_BUILD_AVALON_SUPPORT": "ON",
-          "RDK_BUILD_PGSQL": "OFF",
-          "RDK_INSTALL_INTREE": "ON",
-          "RDK_BUILD_CPP_TESTS": "OFF"
-
-        }
-	  },
-	  {
-        "name": "lin_release_qt6.8.2",
-        "generator": "Unix Makefiles",
-        "binaryDir": "${sourceDir}/buildRelease",
-        "cacheVariables": {
-			
-          "CMAKE_POSITION_INDEPENDENT_CODE":"ON",
-          "CMAKE_BUILD_TYPE": "Release",
-		      "CMAKE_PREFIX_PATH": "~/Qt/6.8.2/gcc_64/lib/cmake",
-
-		      "Boost_DIR": "/usr/local",
-          "Boost_USE_STATIC_LIBS": "ON",
-          "Boost_USE_STATIC_RUNTIME": "ON",
-
-          "BUILD_SHARED_LIBS": "OFF",
-
-          "RDK_USE_BOOST_SERIALIZATION": "ON",
-          "RDK_BUILD_PYTHON_WRAPPERS": "OFF",
-          "RDK_USE_QT6": "ON",
-          "RDK_BUILD_QT_SUPPORT": "ON",
-          "RDK_BUILD_FREETYPE_SUPPORT": "OFF",
-          "RDK_BUILD_INCHI_SUPPORT": "ON",
-          "RDK_BUILD_AVALON_SUPPORT": "ON",
-          "RDK_BUILD_PGSQL": "OFF",
-          "RDK_INSTALL_INTREE": "ON",
-          "RDK_BUILD_CPP_TESTS": "OFF"
-
-        }
-	  }
+      {
+          "name": "unix_debug_qt6.8.2",
+          "generator": "Unix Makefiles",
+          "binaryDir": "${sourceDir}/buildDebug",
+          "cacheVariables": {
+        
+            "CMAKE_POSITION_INDEPENDENT_CODE":"ON",
+            "CMAKE_BUILD_TYPE": "Debug",
+            "CMAKE_PREFIX_PATH": "~/Qt/6.8.2/gcc_64/lib/cmake",
+  
+            "Boost_DIR": "/usr/local",
+            "Boost_USE_STATIC_LIBS": "ON",
+            "Boost_USE_STATIC_RUNTIME": "ON",
+  
+            "BUILD_SHARED_LIBS": "OFF",
+  
+            "RDK_USE_BOOST_SERIALIZATION": "ON",
+            "RDK_BUILD_PYTHON_WRAPPERS": "OFF",
+            "RDK_USE_QT6": "ON",
+            "RDK_BUILD_QT_SUPPORT": "ON",
+            "RDK_BUILD_FREETYPE_SUPPORT": "OFF",
+            "RDK_BUILD_INCHI_SUPPORT": "ON",
+            "RDK_BUILD_AVALON_SUPPORT": "ON",
+            "RDK_BUILD_PGSQL": "OFF",
+            "RDK_INSTALL_INTREE": "ON",
+            "RDK_BUILD_CPP_TESTS": "OFF"
+  
+          }
+      },
+      {
+          "name": "unix_release_qt6.8.2",
+          "generator": "Unix Makefiles",
+          "binaryDir": "${sourceDir}/buildRelease",
+          "cacheVariables": {
+        
+            "CMAKE_POSITION_INDEPENDENT_CODE":"ON",
+            "CMAKE_BUILD_TYPE": "Release",
+            "CMAKE_PREFIX_PATH": "~/Qt/6.8.2/gcc_64/lib/cmake",
+  
+            "Boost_DIR": "/usr/local",
+            "Boost_USE_STATIC_LIBS": "ON",
+            "Boost_USE_STATIC_RUNTIME": "ON",
+  
+            "BUILD_SHARED_LIBS": "OFF",
+  
+            "RDK_USE_BOOST_SERIALIZATION": "ON",
+            "RDK_BUILD_PYTHON_WRAPPERS": "OFF",
+            "RDK_USE_QT6": "ON",
+            "RDK_BUILD_QT_SUPPORT": "ON",
+            "RDK_BUILD_FREETYPE_SUPPORT": "OFF",
+            "RDK_BUILD_INCHI_SUPPORT": "ON",
+            "RDK_BUILD_AVALON_SUPPORT": "ON",
+            "RDK_BUILD_PGSQL": "OFF",
+            "RDK_INSTALL_INTREE": "ON",
+            "RDK_BUILD_CPP_TESTS": "OFF"
+  
+          }
+      },
+      {
+          "name": "jenkins_lin_debug_qt6.8.2",
+          "generator": "Unix Makefiles",
+          "binaryDir": "${sourceDir}/buildDebug",
+          "cacheVariables": {
+        
+            "CMAKE_POSITION_INDEPENDENT_CODE":"ON",
+            "CMAKE_BUILD_TYPE": "Debug",
+            "CMAKE_PREFIX_PATH": "/scratch/jenkins/workspace/Qt/6.8.2/gcc_64/lib/cmake",
+  
+            "Boost_DIR": "/usr/local",
+            "Boost_USE_STATIC_LIBS": "ON",
+            "Boost_USE_STATIC_RUNTIME": "ON",
+  
+            "BUILD_SHARED_LIBS": "OFF",
+  
+            "RDK_USE_BOOST_SERIALIZATION": "ON",
+            "RDK_BUILD_PYTHON_WRAPPERS": "OFF",
+            "RDK_USE_QT6": "ON",
+            "RDK_BUILD_QT_SUPPORT": "ON",
+            "RDK_BUILD_FREETYPE_SUPPORT": "OFF",
+            "RDK_BUILD_INCHI_SUPPORT": "ON",
+            "RDK_BUILD_AVALON_SUPPORT": "ON",
+            "RDK_BUILD_PGSQL": "OFF",
+            "RDK_INSTALL_INTREE": "ON",
+            "RDK_BUILD_CPP_TESTS": "OFF"
+  
+          }
+      },
+      {
+          "name": "jenkins_lin_release_qt6.8.2",
+          "generator": "Unix Makefiles",
+          "binaryDir": "${sourceDir}/buildRelease",
+          "cacheVariables": {
+        
+            "CMAKE_POSITION_INDEPENDENT_CODE":"ON",
+            "CMAKE_BUILD_TYPE": "Release",
+            "CMAKE_PREFIX_PATH": "/scratch/jenkins/workspace/Qt/6.8.2/gcc_64/lib/cmake",
+  
+            "Boost_DIR": "/usr/local",
+            "Boost_USE_STATIC_LIBS": "ON",
+            "Boost_USE_STATIC_RUNTIME": "ON",
+  
+            "BUILD_SHARED_LIBS": "OFF",
+  
+            "RDK_USE_BOOST_SERIALIZATION": "ON",
+            "RDK_BUILD_PYTHON_WRAPPERS": "OFF",
+            "RDK_USE_QT6": "ON",
+            "RDK_BUILD_QT_SUPPORT": "ON",
+            "RDK_BUILD_FREETYPE_SUPPORT": "OFF",
+            "RDK_BUILD_INCHI_SUPPORT": "ON",
+            "RDK_BUILD_AVALON_SUPPORT": "ON",
+            "RDK_BUILD_PGSQL": "OFF",
+            "RDK_INSTALL_INTREE": "ON",
+            "RDK_BUILD_CPP_TESTS": "OFF"
+  
+          }
+      }
 		,
 	  {
-        "name": "mac_debug_qt6.8.2",
+        "name": "jenkins_mac_debug_qt6.8.2",
         "generator": "Unix Makefiles",
         "binaryDir": "${sourceDir}/buildDebug",
         "cacheVariables": {
@@ -116,7 +174,7 @@
         }
 	  },
 	  {
-        "name": "mac_release_qt6.8.2",
+        "name": "jenkins_mac_release_qt6.8.2",
         "generator": "Unix Makefiles",
         "binaryDir": "${sourceDir}/buildRelease",
         "cacheVariables": {
