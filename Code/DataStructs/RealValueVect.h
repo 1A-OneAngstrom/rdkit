@@ -14,6 +14,7 @@
 
 #include <boost/smart_ptr.hpp>
 #include <string>
+#include <vector>
 #include <cstring>
 
 namespace RDGeom {
