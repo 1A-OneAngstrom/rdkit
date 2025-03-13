@@ -39,7 +39,7 @@
   
             "Boost_DIR": "/usr/local",
             "Boost_USE_STATIC_LIBS": "ON",
-            "Boost_USE_STATIC_RUNTIME": "OFF",
+            "Boost_USE_STATIC_RUNTIME": "ON",
   
             "BUILD_SHARED_LIBS": "OFF",
   
@@ -68,7 +68,7 @@
   
             "Boost_DIR": "/usr/local",
             "Boost_USE_STATIC_LIBS": "ON",
-            "Boost_USE_STATIC_RUNTIME": "OFF",
+            "Boost_USE_STATIC_RUNTIME": "ON",
   
             "BUILD_SHARED_LIBS": "OFF",
   
@@ -97,7 +97,7 @@
   
             "Boost_DIR": "/usr/local",
             "Boost_USE_STATIC_LIBS": "ON",
-            "Boost_USE_STATIC_RUNTIME": "OFF",
+            "Boost_USE_STATIC_RUNTIME": "ON",
   
             "BUILD_SHARED_LIBS": "OFF",
   
@@ -126,7 +126,7 @@
   
             "Boost_DIR": "/usr/local",
             "Boost_USE_STATIC_LIBS": "ON",
-            "Boost_USE_STATIC_RUNTIME": "OFF",
+            "Boost_USE_STATIC_RUNTIME": "ON",
   
             "BUILD_SHARED_LIBS": "OFF",
   
@@ -156,7 +156,7 @@
 
 		      "Boost_DIR": "/usr/local",
           "Boost_USE_STATIC_LIBS": "ON",
-          "Boost_USE_STATIC_RUNTIME": "OFF",
+          "Boost_USE_STATIC_RUNTIME": "ON",
 
           "BUILD_SHARED_LIBS": "OFF",
 
@@ -185,7 +185,7 @@
           
 		      "Boost_DIR": "/usr/local",
           "Boost_USE_STATIC_LIBS": "ON",
-          "Boost_USE_STATIC_RUNTIME": "OFF",
+          "Boost_USE_STATIC_RUNTIME": "ON",
 
           "BUILD_SHARED_LIBS": "OFF",
 
