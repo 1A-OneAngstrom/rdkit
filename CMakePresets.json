@@ -39,11 +39,11 @@
   
             "Boost_DIR": "/usr/local",
             "Boost_USE_STATIC_LIBS": "ON",
-            "Boost_USE_STATIC_RUNTIME": "ON",
+            "Boost_USE_STATIC_RUNTIME": "OFF",
   
             "BUILD_SHARED_LIBS": "OFF",
   
-            "RDK_USE_BOOST_SERIALIZATION": "ON",
+            "RDK_USE_BOOST_SERIALIZATION": "OFF",
             "RDK_BUILD_PYTHON_WRAPPERS": "OFF",
             "RDK_USE_QT6": "ON",
             "RDK_BUILD_QT_SUPPORT": "ON",
@@ -68,11 +68,11 @@
   
             "Boost_DIR": "/usr/local",
             "Boost_USE_STATIC_LIBS": "ON",
-            "Boost_USE_STATIC_RUNTIME": "ON",
+            "Boost_USE_STATIC_RUNTIME": "OFF",
   
             "BUILD_SHARED_LIBS": "OFF",
   
-            "RDK_USE_BOOST_SERIALIZATION": "ON",
+            "RDK_USE_BOOST_SERIALIZATION": "OFF",
             "RDK_BUILD_PYTHON_WRAPPERS": "OFF",
             "RDK_USE_QT6": "ON",
             "RDK_BUILD_QT_SUPPORT": "ON",
@@ -97,11 +97,11 @@
   
             "Boost_DIR": "/usr/local",
             "Boost_USE_STATIC_LIBS": "ON",
-            "Boost_USE_STATIC_RUNTIME": "ON",
+            "Boost_USE_STATIC_RUNTIME": "OFF",
   
             "BUILD_SHARED_LIBS": "OFF",
   
-            "RDK_USE_BOOST_SERIALIZATION": "ON",
+            "RDK_USE_BOOST_SERIALIZATION": "OFF",
             "RDK_BUILD_PYTHON_WRAPPERS": "OFF",
             "RDK_USE_QT6": "ON",
             "RDK_BUILD_QT_SUPPORT": "ON",
@@ -126,11 +126,11 @@
   
             "Boost_DIR": "/usr/local",
             "Boost_USE_STATIC_LIBS": "ON",
-            "Boost_USE_STATIC_RUNTIME": "ON",
+            "Boost_USE_STATIC_RUNTIME": "OFF",
   
             "BUILD_SHARED_LIBS": "OFF",
   
-            "RDK_USE_BOOST_SERIALIZATION": "ON",
+            "RDK_USE_BOOST_SERIALIZATION": "OFF",
             "RDK_BUILD_PYTHON_WRAPPERS": "OFF",
             "RDK_USE_QT6": "ON",
             "RDK_BUILD_QT_SUPPORT": "ON",
@@ -156,11 +156,11 @@
 
 		      "Boost_DIR": "/usr/local",
           "Boost_USE_STATIC_LIBS": "ON",
-          "Boost_USE_STATIC_RUNTIME": "ON",
+          "Boost_USE_STATIC_RUNTIME": "OFF",
 
           "BUILD_SHARED_LIBS": "OFF",
 
-          "RDK_USE_BOOST_SERIALIZATION": "ON",
+          "RDK_USE_BOOST_SERIALIZATION": "OFF",
           "RDK_BUILD_PYTHON_WRAPPERS": "OFF",
           "RDK_USE_QT6": "ON",
           "RDK_BUILD_QT_SUPPORT": "ON",
@@ -185,11 +185,11 @@
           
 		      "Boost_DIR": "/usr/local",
           "Boost_USE_STATIC_LIBS": "ON",
-          "Boost_USE_STATIC_RUNTIME": "ON",
+          "Boost_USE_STATIC_RUNTIME": "OFF",
 
           "BUILD_SHARED_LIBS": "OFF",
 
-          "RDK_USE_BOOST_SERIALIZATION": "ON",
+          "RDK_USE_BOOST_SERIALIZATION": "OFF",
           "RDK_BUILD_PYTHON_WRAPPERS": "OFF",
           "RDK_USE_QT6": "ON",
           "RDK_BUILD_QT_SUPPORT": "ON",
