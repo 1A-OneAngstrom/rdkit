@@ -64,6 +64,7 @@ __pycache__/
 
 /External/**/*.tar.gz
 /External/**/*.zip
+/External/AvalonTools/
 /External/AvalonTools/SourceDistribution
 /External/CoordGen/coordgen/
 /External/CoordGen/maeparser/
