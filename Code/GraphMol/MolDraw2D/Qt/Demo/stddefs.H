@@ -13,6 +13,7 @@
 #include <iostream>
 #include <iterator>
 #include <string>
+#include <filesystem> // DM: support UTF8 paths
 
 #include <cmath>
 
@@ -274,7 +275,8 @@ template <class T , class U> inline void translate( U coords[3] ,
 // the last access time if it does. Returns true if successful, false otherwise
 inline bool touch_file( const std::string filename ) {
 
-  std::ofstream tf( filename.c_str() );
+	const std::filesystem::path filePath = std::filesystem::u8path(filename); // DM: support UTF8 paths
+  std::ofstream tf(filePath);
   if( tf && tf.good() )
     return true;
   else

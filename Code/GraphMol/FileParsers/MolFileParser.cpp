@@ -43,6 +43,7 @@
 #include <cstdlib>
 #include <cstdio>
 #include <string_view>
+#include <filesystem> // DM: support UTF8 paths
 
 using namespace RDKit::SGroupParsing;
 using std::regex;
@@ -3620,7 +3621,8 @@ std::unique_ptr<RWMol> MolFromMolBlock(const std::string &molBlock,
 //------------------------------------------------
 std::unique_ptr<RWMol> MolFromMolFile(const std::string &fName,
                                       const MolFileParserParams &params) {
-  std::ifstream inStream(fName.c_str());
+  const std::filesystem::path filePath = std::filesystem::u8path(fName); // DM: support UTF8 paths
+  std::ifstream inStream(filePath);
   if (!inStream || (inStream.bad())) {
     std::ostringstream errout;
     errout << "Bad input file " << fName;

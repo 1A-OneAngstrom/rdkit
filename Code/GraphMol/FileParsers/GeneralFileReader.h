@@ -17,6 +17,7 @@
 #include <memory>
 #include <string>
 #include <vector>
+#include <filesystem> // DM: support UTF8 paths
 
 #include "MolSupplier.h"
 #include "MultithreadedSDMolSupplier.h"
@@ -105,7 +106,8 @@ inline std::unique_ptr<FileParsers::MolSupplier> getSupplier(
 
   std::istream *strm;
   if (compressionFormat.empty()) {
-    strm = new std::ifstream(path.c_str(), std::ios::in | std::ios::binary);
+	  const std::filesystem::path filePath = std::filesystem::u8path(path); // DM: support UTF8 paths
+    strm = new std::ifstream(filePath, std::ios::in | std::ios::binary);
   } else {
 #ifdef RDK_USE_BOOST_IOSTREAMS
     strm = new gzstream(path);

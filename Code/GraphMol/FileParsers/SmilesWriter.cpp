@@ -12,6 +12,7 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <filesystem> // DM: support UTF8 paths
 
 #include <GraphMol/SmilesParse/SmilesWrite.h>
 #include <RDGeneral/BadFileException.h>
@@ -31,7 +32,8 @@ SmilesWriter::SmilesWriter(const std::string &fileName,
                            const std::string &nameHeader, bool includeHeader,
                            bool isomericSmiles, bool kekuleSmiles) {
   if (fileName != "-") {
-    auto *tmpStream = new std::ofstream(fileName.c_str());
+	  const std::filesystem::path filePath = std::filesystem::u8path(fileName); // DM: support UTF8 paths
+    auto *tmpStream = new std::ofstream(filePath);
     if (!(*tmpStream) || (tmpStream->bad())) {
       delete tmpStream;
       std::ostringstream errout;

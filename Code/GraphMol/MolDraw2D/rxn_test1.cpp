@@ -33,6 +33,7 @@
 #include <sstream>
 #include <iterator>
 #include <map>
+#include <filesystem> // DM: support UTF8 paths
 
 using namespace RDKit;
 #ifdef RDK_BUILD_CAIRO_SUPPORT
@@ -92,7 +93,8 @@ static const std::map<std::string, std::hash_result_t> PNG_HASHES = {
 };
 
 std::hash_result_t hash_file(const std::string &filename) {
-  std::ifstream ifs(filename, std::ios_base::binary);
+  const std::filesystem::path filePath = std::filesystem::u8path(filename); // DM: support UTF8 paths
+  std::ifstream ifs(filePath, std::ios_base::binary);
   std::string file_contents(std::istreambuf_iterator<char>{ifs}, {});
   if (filename.substr(filename.length() - 4) == ".svg") {
     // deal with MSDOS newlines.
@@ -145,7 +147,8 @@ void drawit(ChemicalReaction *rxn, std::string nameBase,
   }
 #endif
   {
-    std::ofstream outs((nameBase + ".svg").c_str());
+	  const std::filesystem::path filePath = std::filesystem::u8path(nameBase + ".svg"); // DM: support UTF8 paths
+    std::ofstream outs(filePath);
     MolDraw2DSVG drawer(width, height, outs);
     drawer.drawReaction(*rxn, highlight_map, highlight_colors);
     drawer.finishDrawing();

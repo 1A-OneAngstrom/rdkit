@@ -12,6 +12,7 @@
 
 #include <cairo.h>
 #include <fstream>
+#include <filesystem> // DM: support UTF8 paths
 #include <GraphMol/MolDraw2D/MolDraw2DCairo.h>
 #include <GraphMol/MolDraw2D/DrawTextCairo.h>
 #include <GraphMol/MolDraw2D/MolDraw2DDetails.h>
@@ -219,7 +220,8 @@ std::string MolDraw2DCairo::getDrawingText() const {
 void MolDraw2DCairo::writeDrawingText(const std::string &fName) const {
   PRECONDITION(dp_cr, "no draw context");
   auto png = getDrawingText();
-  std::ofstream outs(fName.c_str(), std::ios_base::binary | std::ios_base::out);
+	const std::filesystem::path filePath = std::filesystem::u8path(fName); // DM: support UTF8 paths
+  std::ofstream outs(filePath, std::ios_base::binary | std::ios_base::out);
   if (!outs || outs.bad()) {
     BOOST_LOG(rdErrorLog) << "Failed to write PNG file " << fName << std::endl;
     return;

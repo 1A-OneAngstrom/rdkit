@@ -12,6 +12,7 @@
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <filesystem> // DM: support UTF8 paths
 #include <RDGeneral/BoostStartInclude.h>
 #include <boost/lexical_cast.hpp>
 #include <boost/algorithm/string.hpp>
@@ -707,7 +708,8 @@ std::unique_ptr<RWMol> MolFromPDBDataStream(std::istream &inStream,
 
 std::unique_ptr<RWMol> MolFromPDBFile(const std::string &fileName,
                                       const PDBParserParams &params) {
-  std::ifstream ifs(fileName.c_str(), std::ios_base::binary);
+  const std::filesystem::path filePath = std::filesystem::u8path(fileName); // DM: support UTF8 paths
+  std::ifstream ifs(filePath, std::ios_base::binary);
   if (!ifs || ifs.bad()) {
     std::ostringstream errout;
     errout << "Bad input file " << fileName;

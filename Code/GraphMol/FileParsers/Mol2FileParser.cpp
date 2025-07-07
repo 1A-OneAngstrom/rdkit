@@ -41,6 +41,7 @@
 #include <RDGeneral/RDLog.h>
 //
 #include <fstream>
+#include <filesystem> // DM: support UTF8 paths
 #include <boost/tokenizer.hpp>
 #include <boost/lexical_cast.hpp>
 #include <boost/algorithm/string/trim.hpp>
@@ -1005,7 +1006,8 @@ std::unique_ptr<RWMol> MolFromMol2File(const std::string &fName,
   // FIX: this binary mode of opening file is here because of a bug in VC++ 6.0
   // the function "tellg" does not work correctly if we do not open it this way
   //   Jan 2009: Confirmed that this is still the case in visual studio 2008
-  std::ifstream inStream(fName.c_str(), std::ios_base::binary);
+  const std::filesystem::path filePath = std::filesystem::u8path(fName); // DM: support UTF8 paths
+  std::ifstream inStream(filePath, std::ios_base::binary);
   if (!inStream || (inStream.bad())) {
     std::ostringstream errout;
     errout << "Bad input file " << fName;

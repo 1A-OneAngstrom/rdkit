@@ -28,6 +28,7 @@
 #include <iostream>
 #include <iomanip>
 #include <cstdio>
+#include <filesystem> // DM: support UTF8 paths
 
 #include <boost/format.hpp>
 #include <boost/dynamic_bitset.hpp>
@@ -1455,7 +1456,8 @@ std::string MolToV2KMolBlock(const ROMol &mol, const MolWriterParams &params,
 //------------------------------------------------
 void MolToMolFile(const ROMol &mol, const std::string &fName,
                   const MolWriterParams &params, int confId) {
-  auto *outStream = new std::ofstream(fName.c_str());
+	const std::filesystem::path filePath = std::filesystem::u8path(fName); // DM: support UTF8 paths
+  auto *outStream = new std::ofstream(filePath);
   if (!(*outStream) || outStream->bad()) {
     delete outStream;
     std::ostringstream errout;

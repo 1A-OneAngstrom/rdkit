@@ -22,6 +22,7 @@
 #include <string>
 #include <fstream>
 #include <sstream>
+#include <filesystem> // DM: support UTF8 paths
 
 namespace RDKit {
 
@@ -42,7 +43,8 @@ PNGStreamToMetadata(std::istream &inStream);
 //! \brief returns the metadata (tEXt and zTXt chunks) from PNG data
 inline std::vector<std::pair<std::string, std::string>> PNGFileToMetadata(
     const std::string &fname) {
-  std::ifstream inStream(fname.c_str(), std::ios::binary);
+  const std::filesystem::path filePath = std::filesystem::u8path(fname); // DM: support UTF8 paths
+  std::ifstream inStream(filePath, std::ios::binary);
   if (!inStream || (inStream.bad())) {
     throw BadFileException((boost::format("Bad input file %s") % fname).str());
   }
@@ -85,7 +87,8 @@ inline std::string addMetadataToPNGFile(
     const std::string &fname,
     const std::vector<std::pair<std::string, std::string>> &metadata,
     bool compressed = true) {
-  std::ifstream inStream(fname.c_str(), std::ios::binary);
+  const std::filesystem::path filePath = std::filesystem::u8path(fname); // DM: support UTF8 paths
+  std::ifstream inStream(filePath, std::ios::binary);
   return addMetadataToPNGStream(inStream, metadata, compressed);
 }
 //! @}
@@ -112,7 +115,8 @@ RDKIT_FILEPARSERS_EXPORT ROMol *PNGStreamToMol(
 inline ROMol *PNGFileToMol(
     const std::string &fname,
     const SmilesParserParams &params = SmilesParserParams()) {
-  std::ifstream inStream(fname.c_str(), std::ios::binary);
+  const std::filesystem::path filePath = std::filesystem::u8path(fname); // DM: support UTF8 paths
+  std::ifstream inStream(filePath, std::ios::binary);
   if (!inStream || (inStream.bad())) {
     throw BadFileException((boost::format("Bad input file %s") % fname).str());
   }
@@ -143,7 +147,8 @@ RDKIT_FILEPARSERS_EXPORT std::vector<std::unique_ptr<ROMol>> PNGStreamToMols(
 inline std::vector<std::unique_ptr<ROMol>> PNGFileToMols(
     const std::string &fname, const std::string &tagToUse = PNGData::pklTag,
     const SmilesParserParams &params = SmilesParserParams()) {
-  std::ifstream inStream(fname.c_str(), std::ios::binary);
+  const std::filesystem::path filePath = std::filesystem::u8path(fname); // DM: support UTF8 paths
+  std::ifstream inStream(filePath, std::ios::binary);
   if (!inStream || (inStream.bad())) {
     throw BadFileException((boost::format("Bad input file %s") % fname).str());
   }
@@ -192,7 +197,8 @@ inline std::string addMolToPNGFile(const ROMol &mol, const std::string &fname,
                                    bool includePkl = true,
                                    bool includeSmiles = true,
                                    bool includeMol = false) {
-  std::ifstream inStream(fname.c_str(), std::ios::binary);
+  const std::filesystem::path filePath = std::filesystem::u8path(fname); // DM: support UTF8 paths
+  std::ifstream inStream(filePath, std::ios::binary);
   return addMolToPNGStream(mol, inStream, includePkl, includeSmiles,
                            includeMol);
 }

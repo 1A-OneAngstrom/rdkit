@@ -14,6 +14,7 @@
 
 #include <string>
 #include <fstream>
+#include <filesystem> // DM: support UTF8 paths
 
 // ours
 #include <RDGeneral/BadFileException.h>
@@ -64,8 +65,9 @@ class LocalForwardSDMolSupplier : public RDKit::ForwardSDMolSupplier {
   LocalForwardSDMolSupplier(std::string filename, bool sanitize, bool removeHs,
                             bool strictParsing) {
     std::istream *tmpStream = nullptr;
+    const std::filesystem::path filePath = std::filesystem::u8path(filename); // DM: support UTF8 paths
     tmpStream = static_cast<std::istream *>(
-        new std::ifstream(filename.c_str(), std::ios_base::binary));
+        new std::ifstream(filePath, std::ios_base::binary));
     if (!(*tmpStream) || tmpStream->bad()) {
       delete tmpStream;
       std::ostringstream errout;
