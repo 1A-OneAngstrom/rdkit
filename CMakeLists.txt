@@ -72,7 +72,7 @@ option(RDK_BUILD_MINIMAL_LIB_RXN "build support for reactions into MinimalLib" O
 option(RDK_BUILD_MINIMAL_LIB_SUBSTRUCTLIBRARY "build support for SubstructLibrary into MinimalLib" ON )
 option(RDK_BUILD_MINIMAL_LIB_MCS "build support for MCS into MinimalLib" OFF )
 
-set(RDK_BOOST_VERSION "1.70.0")
+set(RDK_BOOST_VERSION "1.87.0")
 
 if(NOT MSVC)
   if(RDK_OPTIMIZE_POPCNT)
