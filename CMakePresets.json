@@ -104,17 +104,39 @@
       "inherits": "mac-release-base"
     },
     {
-      "name": "win_qt6.8.2",
+      "name": "win_qt6.8.2_release",
       "inherits": "win-base",
+      "binaryDir": "${sourceDir}/build_win_qt6.8.2_release",
       "cacheVariables": {
-        "CMAKE_PREFIX_PATH": "C:/Qt/6.8.2/msvc2022_64/lib/cmake"
+        "CMAKE_PREFIX_PATH": "C:/Qt/6.8.2/msvc2022_64/lib/cmake",
+        "CMAKE_BUILD_TYPE": "Release"
       }
     },
     {
-      "name": "win_qt6.10.2",
+      "name": "win_qt6.8.2_debug",
       "inherits": "win-base",
+      "binaryDir": "${sourceDir}/build_win_qt6.8.2_debug",
       "cacheVariables": {
-        "CMAKE_PREFIX_PATH": "C:/Qt/6.10.2/msvc2022_64/lib/cmake"
+        "CMAKE_PREFIX_PATH": "C:/Qt/6.8.2/msvc2022_64/lib/cmake",
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "win_qt6.10.2_release",
+      "inherits": "win-base",
+      "binaryDir": "${sourceDir}/build_win_qt6.10.2_release",
+      "cacheVariables": {
+        "CMAKE_PREFIX_PATH": "C:/Qt/6.10.2/msvc2022_64/lib/cmake",
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
+      "name": "win_qt6.10.2_debug",
+      "inherits": "win-base",
+      "binaryDir": "${sourceDir}/build_win_qt6.10.2_debug",
+      "cacheVariables": {
+        "CMAKE_PREFIX_PATH": "C:/Qt/6.10.2/msvc2022_64/lib/cmake",
+        "CMAKE_BUILD_TYPE": "Debug"
       }
     },
     {
@@ -233,7 +255,7 @@
   "buildPresets": [
     {
       "name": "build_win_qt6.8.2_release",
-      "configurePreset": "win_qt6.8.2",
+      "configurePreset": "win_qt6.8.2_release",
       "configuration": "Release",
       "targets": [
         "INSTALL"
@@ -241,7 +263,7 @@
     },
     {
       "name": "build_win_qt6.8.2_debug",
-      "configurePreset": "win_qt6.8.2",
+      "configurePreset": "win_qt6.8.2_release",
       "configuration": "Debug",
       "targets": [
         "INSTALL"
@@ -249,7 +271,7 @@
     },
     {
       "name": "build_win_qt6.10.2_release",
-      "configurePreset": "win_qt6.10.2",
+      "configurePreset": "win_qt6.10.2_release",
       "configuration": "Release",
       "targets": [
         "INSTALL"
@@ -257,7 +279,7 @@
     },
     {
       "name": "build_win_qt6.10.2_debug",
-      "configurePreset": "win_qt6.10.2",
+      "configurePreset": "win_qt6.10.2_release",
       "configuration": "Debug",
       "targets": [
         "INSTALL"
