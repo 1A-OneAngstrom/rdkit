@@ -22,8 +22,7 @@
       "name": "win-base",
       "hidden": true,
       "inherits": "rdkit-common",
-      "generator": "Visual Studio 18 2026",
-      "binaryDir": "${sourceDir}/build/${presetName}",
+      "binaryDir": "${sourceDir}/build_${presetName}",
       "cacheVariables": {
         "Boost_DIR": "C:/local/boost_1_87_0/lib64-msvc-14.3/cmake/Boost-1.87.0",
         "Boost_USE_STATIC_LIBS": "ON",
@@ -71,14 +70,38 @@
       "inherits": "unix-release-base"
     },
     {
+      "name": "mac-base",
+      "hidden": true,
+      "inherits": "unix-base",
+      "cacheVariables": {
+        "CMAKE_OSX_ARCHITECTURES": "x86_64"
+      }
+    },
+    {
+      "name": "mac-debug-base",
+      "hidden": true,
+      "inherits": "mac-base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+    {
+      "name": "mac-release-base",
+      "hidden": true,
+      "inherits": "mac-base",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+    {
       "name": "jenkins-mac-debug-base",
       "hidden": true,
-      "inherits": "unix-debug-base"
+      "inherits": "mac-debug-base"
     },
     {
       "name": "jenkins-mac-release-base",
       "hidden": true,
-      "inherits": "unix-release-base"
+      "inherits": "mac-release-base"
     },
     {
       "name": "win_qt6.8.2",
@@ -126,28 +149,56 @@
       "name": "jenkins_lin_debug_qt6.8.2",
       "inherits": "jenkins-lin-debug-base",
       "cacheVariables": {
-        "CMAKE_PREFIX_PATH": "/scratch/jenkins/workspace/Qt/6.8.2/gcc_64/lib/cmake"
+        "Qt6_DIR": "/jenkins/jenkins/workspace/Qt/6.8.2/gcc_64/lib/cmake/Qt6"
       }
     },
     {
       "name": "jenkins_lin_release_qt6.8.2",
       "inherits": "jenkins-lin-release-base",
       "cacheVariables": {
-        "CMAKE_PREFIX_PATH": "/scratch/jenkins/workspace/Qt/6.8.2/gcc_64/lib/cmake"
+        "Qt6_DIR": "/jenkins/jenkins/workspace/Qt/6.8.2/gcc_64/lib/cmake/Qt6"
       }
     },
     {
       "name": "jenkins_lin_debug_qt6.10.2",
       "inherits": "jenkins-lin-debug-base",
       "cacheVariables": {
-        "CMAKE_PREFIX_PATH": "/scratch/jenkins/workspace/Qt/6.10.2/gcc_64/lib/cmake"
+        "Qt6_DIR": "/jenkins/jenkins/workspace/Qt/6.10.2/gcc_64/lib/cmake/Qt6"
       }
     },
     {
       "name": "jenkins_lin_release_qt6.10.2",
       "inherits": "jenkins-lin-release-base",
       "cacheVariables": {
-        "CMAKE_PREFIX_PATH": "/scratch/jenkins/workspace/Qt/6.10.2/gcc_64/lib/cmake"
+        "Qt6_DIR": "/jenkins/jenkins/workspace/Qt/6.10.2/gcc_64/lib/cmake/Qt6"
+      }
+    },
+    {
+      "name": "mac_debug_qt6.8.2",
+      "inherits": "mac-debug-base",
+      "cacheVariables": {
+        "CMAKE_PREFIX_PATH": "~/Qt/6.8.2/macos/lib/cmake"
+      }
+    },
+    {
+      "name": "mac_release_qt6.8.2",
+      "inherits": "mac-release-base",
+      "cacheVariables": {
+        "CMAKE_PREFIX_PATH": "~/Qt/6.8.2/macos/lib/cmake"
+      }
+    },
+    {
+      "name": "mac_debug_qt6.10.2",
+      "inherits": "mac-debug-base",
+      "cacheVariables": {
+        "CMAKE_PREFIX_PATH": "~/Qt/6.10.2/macos/lib/cmake"
+      }
+    },
+    {
+      "name": "mac_release_qt6.10.2",
+      "inherits": "mac-release-base",
+      "cacheVariables": {
+        "CMAKE_PREFIX_PATH": "~/Qt/6.10.2/macos/lib/cmake"
       }
     },
     {
@@ -210,6 +261,34 @@
       "configuration": "Debug",
       "targets": [
         "INSTALL"
+      ]
+    },
+    {
+      "name": "build_mac_qt6.8.2_release",
+      "configurePreset": "mac_release_qt6.8.2",
+      "targets": [
+        "install"
+      ]
+    },
+    {
+      "name": "build_mac_qt6.8.2_debug",
+      "configurePreset": "mac_debug_qt6.8.2",
+      "targets": [
+        "install"
+      ]
+    },
+    {
+      "name": "build_mac_qt6.10.2_release",
+      "configurePreset": "mac_release_qt6.10.2",
+      "targets": [
+        "install"
+      ]
+    },
+    {
+      "name": "build_mac_qt6.10.2_debug",
+      "configurePreset": "mac_debug_qt6.10.2",
+      "targets": [
+        "install"
       ]
     }
   ]
