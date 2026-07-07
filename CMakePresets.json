@@ -35,7 +35,7 @@
       "hidden": true,
       "inherits": "rdkit-common",
       "generator": "Unix Makefiles",
-      "binaryDir": "${sourceDir}/build/${presetName}",
+      "binaryDir": "${sourceDir}/build_${presetName}",
       "cacheVariables": {
         "Boost_DIR": "/usr/local",
         "Boost_USE_STATIC_LIBS": "ON",
