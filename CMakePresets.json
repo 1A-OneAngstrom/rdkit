@@ -263,7 +263,7 @@
     },
     {
       "name": "build_win_qt6.8.2_debug",
-      "configurePreset": "win_qt6.8.2_release",
+      "configurePreset": "win_qt6.8.2_debug",
       "configuration": "Debug",
       "targets": [
         "INSTALL"
@@ -279,7 +279,7 @@
     },
     {
       "name": "build_win_qt6.10.2_debug",
-      "configurePreset": "win_qt6.10.2_release",
+      "configurePreset": "win_qt6.10.2_debug",
       "configuration": "Debug",
       "targets": [
         "INSTALL"
